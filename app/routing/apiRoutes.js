@@ -1,7 +1,5 @@
 var friendsData = require('../data/friends.js');
 
-var path = require('path');
-
 // ============================
 // ROUTING
 // ============================
@@ -33,7 +31,7 @@ module.exports = function(app) {
                 //console.log("you entered " +  req.body.scores[k]);
                 //console.log("you differed by " + Math.abs(friendsData[i].scores[k] - req.body.scores[k]) );
 
-                totalDifference = totalDifference + Math.abs(friendsData[i].scores[k] - req.body.scores[k]);
+                totalDifference = totalDifference + (friendsData[i].scores[k] - req.body.scores[k]);
 
             }
 
